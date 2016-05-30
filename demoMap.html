@@ -1,0 +1,61 @@
+<html>
+	
+	<header>
+		<title>Demo Map</title>
+
+	<style>
+	      #map {
+	        width: 500px;
+	        height: 400px;
+	      }
+    </style>
+	</header>
+	<body>
+		
+
+		<h1>Demo Map</h1>
+
+
+		<div id="map">
+			
+		</div>
+		<!--
+		<script>
+	      var map;
+	      function initMap() {
+	        map = new google.maps.Map(document.getElementById('map'), {
+	        	/*16.0738013,108.1477255*/
+	          center: {lat: 16.0738013, lng: 108.1477255},
+	          zoom: 16
+	        });
+	      }
+    	</script>
+		-->
+
+    	<script type="text/javascript">
+    		function initMap() {
+				var myLatLng = {lat: 16.0738013, lng: 108.1477255};
+
+			    // Create a map object and specify the DOM element for display.
+			    var map = new google.maps.Map(document.getElementById('map'), {
+				    center: myLatLng,
+				    scrollwheel: false,
+				    zoom: 16
+			    });
+
+			    // Create a marker and set its position.
+			    var marker = new google.maps.Marker({
+			    	map: map,
+			    	position: myLatLng,
+			    	title: 'DUT!'
+			  	});
+				}
+    	</script>
+
+    	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+
+
+
+	</body>
+
+</html>
